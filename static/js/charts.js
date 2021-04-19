@@ -94,6 +94,9 @@ function buildCharts(sample) {
        
     }
     
+    
+    // 3. Create a variable that holds the washing frequency.
+  //  var washingFrequency = metadata.filter(sampleObj => sampleObj.id == sample);
 
     // 8. Create the trace for the bar chart. 
     var barData = [{
@@ -104,7 +107,7 @@ function buildCharts(sample) {
       orientation: 'h'
       
   }];
-  // C:\Users\appii\Google Drive\Projects\UC Bootcamp\03-Lesson-Plans\12-Lessons\1\Activities
+
     // 9. Create the layout for the bar chart. 
     var barLayout = {
       title: "Top 10 Bacteria Cultures Found",
@@ -121,7 +124,6 @@ function buildCharts(sample) {
       x : sampleObject.otu_ids,
       y : sampleObject.sample_values,
       text : sampleObject.otu_labels,
-      // type : 'bubble',
       mode: 'markers',
       marker: {
         color: sampleObject.otu_ids,
@@ -133,8 +135,6 @@ function buildCharts(sample) {
     var bubbleLayout = {
       title: "Bacteria Cultures Per Sample",
       xaxis: { title: "OTU ID"},
-      // yaxis: {title: "" },
-      // showlegend: false,
       height: 600,
       width: 1400
     };
@@ -143,5 +143,23 @@ function buildCharts(sample) {
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
 
 
+
+    // DELIVERABLE 3
+        
+    // 4. Create the trace for the gauge chart.
+    var gaugeData = [{
+      domain:{
+        x: ''
+      }
+
+    }];
+    
+    // 5. Create the layout for the gauge chart.
+    var gaugeLayout = { 
+     
+    };
+
+    // 6. Use Plotly to plot the gauge data and layout.
+    
   });
 }
