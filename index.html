@@ -7,23 +7,29 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bellybutton Biodiversity</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+  * {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  }
+
+  </style>
 </head>
 
 <body>
 
   <div class="container">
     <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <h1>Belly Button Biodiversity Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
+      <div class="col-md-12 jumbotron text-center" style="background-color: black;">
+        <h1 style="color:white">Belly Button Biodiversity Dashboard</h1>
+        <p style="color:white">Use the interactive charts below to explore the dataset</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-2">
         <div class="well">
-          <h5>Test Subject ID No.:</h5>
+          <h5 class="modal-title">Test Subject ID No.:</h5>
           <!-- <select id="selDataset"></select> -->
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          <select id="selDataset" style="background-color: #337ab7;color: white;padding: 10px; font-size: 16px;border: none;" onchange="optionChanged(this.value)"></select>
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
@@ -33,18 +39,19 @@
         </div>
       </div>
       <div class="col-md-5">
-        <div id="bar"></div>
+        <div class="col-md-12">
+          <div id="bubble"></div>
+        </div>
       </div>
-      <div class="col-md-5">
-        <div id="gauge"></div>
-      </div>
+    </div><hr>
+    <div class="col-md-5">
+      <div id="bar"></div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="bubble"></div>
-      </div>
+    <div class="col-md-5">
+      <div id="gauge"></div>
     </div>
-  </div>
+
+  </div><hr>
   <h4 style="text-align: center; padding:50px">
     <b>About the Belly Button Project:</b> The purpose of this dashboard is to visualize the bacterial data for each volunteer. Specifically, volunteers should be able to identify the top 10 bacterial species in their belly buttons. That way, if Improbable Beef identifies a species as a candidate to manufacture synthetic beef, the project's volunteers will be able to identify whether that species is found in their navel.
   </h4>

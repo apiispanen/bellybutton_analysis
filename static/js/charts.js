@@ -99,8 +99,8 @@ function buildCharts(sample) {
     
     // 3. Create a variable that holds the washing frequency.
 
-    
     var washingFrequency = null;
+    
     // GET WASHING FREQUENCY
 
     var metadata = data.metadata;
@@ -151,7 +151,7 @@ function buildCharts(sample) {
       title: "Bacteria Cultures Per Sample",
       xaxis: { title: "OTU ID"},
       height: 600,
-      width: 1400
+      width: 1000
     };
 
     // 3. Use Plotly to plot the data with the layout.
